@@ -3,12 +3,113 @@
     "name": "newest",
     "repo_url": "https://github.com/Riot-alt/newest"
   },
-  "structure": "monorepo",
-  "apps": [
-    "api",
-    "web"
+  "features": [
+    {
+      "name": "User Authentication",
+      "status": "planned"
+    },
+    {
+      "name": "Product Listings",
+      "status": "planned"
+    },
+    {
+      "name": "Order Management",
+      "status": "planned"
+    },
+    {
+      "name": "Inventory Management",
+      "status": "planned"
+    },
+    {
+      "name": "User Dashboard",
+      "status": "planned"
+    }
   ],
-  "database": [],
-  "endpoints": [],
-  "features": []
+  "database": [
+    {
+      "table": "users",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "username",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "products",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "table": "orders",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        },
+        {
+          "name": "product_id",
+          "type": "integer"
+        },
+        {
+          "name": "status",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "route": "/user-authentication"
+    },
+    {
+      "method": "GET",
+      "route": "/product-listings"
+    },
+    {
+      "method": "GET",
+      "route": "/order-management"
+    },
+    {
+      "method": "GET",
+      "route": "/inventory-management"
+    },
+    {
+      "method": "GET",
+      "route": "/user-dashboard"
+    }
+  ]
 }
