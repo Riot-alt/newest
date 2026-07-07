@@ -1,0 +1,14 @@
+{
+  "project": {
+    "name": "newest",
+    "repo_url": "https://github.com/Riot-alt/newest"
+  },
+  "structure": "monorepo",
+  "apps": [
+    "api",
+    "web"
+  ],
+  "database": [],
+  "endpoints": [],
+  "features": []
+}
